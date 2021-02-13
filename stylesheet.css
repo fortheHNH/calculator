@@ -1,0 +1,103 @@
+* {
+  /* border-color: red;
+  border-style: solid; */
+}
+body {
+  display:flex;
+  justify-content: center;
+}
+
+#main-container {
+  background-color: black;
+  border-radius: 10px;
+  width:350px;
+  max-width: 350px;
+  min-width:350px;
+  height: 520px;
+}
+
+#input {
+  background-color: black;
+  border-style: none;
+  width:95%;
+  height: 20%;
+  margin: 10px;
+  color:white;
+  font-size: 3rem;
+}
+
+#btn-container {
+  width: 95%;
+  max-width: 500px;
+  margin: 10px;
+  display:grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:  "clr clr clr op"
+                        "num num num op"
+                        "num num num op"
+                        "num num num op"
+                        "bottom bottom bottom op";
+}
+
+button {
+  border-radius: 14px;
+  color:white;
+  background-color: #888;
+  border-style:none;
+}
+
+#operators {
+  grid-area: op;
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  row-gap: 20px;
+}
+
+#numbers {
+  grid-area: num;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  grid-gap: 15px;
+}
+
+#bottom-container {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-area: bottom;
+}
+
+#clear {
+  grid-area: clr;
+  font-size: 3rem;
+  background-color: #444;
+}
+
+#zero {
+  font-size: 3rem;
+  width: 65%;
+}
+
+#point {
+  width: 67px;
+  font-size: 3rem;
+  border-radius: 50%;
+}
+
+.operator {
+  width: 67px;
+  font-size: 3rem;
+  border-radius: 50%;
+  background-color: orange;
+}
+
+.num {
+  width: 67px;
+  font-size: 3rem;
+  border-radius: 50%;
+
+}
